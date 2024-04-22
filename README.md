@@ -143,16 +143,14 @@ Run the following command as ADMIN.
 
 	Create a **Classic Report **Region** **and Type as **Function Body returning SQL Query**. Enable **Use Generic Column Names** property and enter number of columns in** Generic Column Count.**
 
-	Enter PL/SQL Function Body as follows. 
-	
-		DBMS_CLOUD_AI.GENERATE returns the SQL query using SELECT AI.
-        
-	    BEGIN
-         IF :PROMPT IS NOT NULL THEN
-            RETURN DBMS_CLOUD_AI.GENERATE(:PROMPT,
-                                  profile_name => 'OCI_GENAI');
-         END IF;
-	    END;
+	Enter PL/SQL Function Body as follows. `DBMS_CLOUD_AI.GENERATE` returns the SQL query using SELECT AI.
+
+		BEGIN
+			IF :PROMPT IS NOT NULL THEN
+				RETURN DBMS_CLOUD_AI.GENERATE(:PROMPT,
+					profile_name => 'OCI_GENAI');
+			END IF;
+		END;
 
 	![APEX][32]
 
