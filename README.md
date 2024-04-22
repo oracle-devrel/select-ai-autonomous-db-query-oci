@@ -69,7 +69,7 @@ Run the following command as ADMIN.
 
 1. To access OCI Generative AI service from Select AI, set the required IAM [policies][14]. An example is given below.
 
-    allow group <your-group-name> to manage generative-ai-family in compartment <your-compartment-name>
+    allow group `<your-group-name>` to manage generative-ai-family in compartment `<your-compartment-name>`
 
 2. Connect as an ADMIN user to the database and enable OCI [resource principal][16] authentication using [DBMS_CLOUD_ADMIN.ENABLE_PRINCIPAL_AUTH][17] procedure.
 
@@ -95,8 +95,8 @@ Run the following command as ADMIN.
             "model": "cohere.command-light",
             "oci_runtimetype": "COHERE",
             "temperature":"0.4"
-          }');                                                                  
-        END;
+          }');
+		END;
 
 	Attributes of an AI profile help to manage and configure the behavior of the AI profile. For the full list of attributes refer to [this][21].
 
@@ -123,11 +123,11 @@ Run the following command as ADMIN.
     
 	    SELECT AI show all employees in Accounting department;
 
-	Select AI is not supported in Database Actions or APEX Service. You can use only [DBMS_CLOUD_AI.GENERATE][28] function.    
+	Select AI is not supported in Database Actions or APEX Service. You can use only [DBMS_CLOUD_AI.GENERATE][28] function.
     
 	    SELECT DBMS_CLOUD_AI.GENERATE(prompt       => 'show all employees in Accounting department',
-                                  profile_name => 'OCI_GENAI'
-                                 )
+                                        profile_name => 'OCI_GENAI'
+                                      )
         FROM dual;
 
 6. If you need a UI to run your prompts, one option is to use Oracle APEX.
@@ -141,7 +141,7 @@ Run the following command as ADMIN.
 
 	[30]: https://www.ateam-oracle.com/content/published/api/v1.1/assets/CONT647046228E1E44BD83D6E1B8E5E28539/Medium?cb=_cache_538e&channelToken=12f676b76bf44b4e9b22e6b36ebfe358&format=jpg
 
-	Create a **Classic Report **Region** **and Type as **Function Body returning SQL Query**. Enable **Use Generic Column Names** property and enter number of columns in** Generic Column Count.**
+	Create a **Classic Report Region** and Type as **Function Body returning SQL Query**. Enable **Use Generic Column Names** property and enter number of columns in **Generic Column Count.**
 
 	Enter PL/SQL Function Body as follows. `DBMS_CLOUD_AI.GENERATE` returns the SQL query using SELECT AI.
 
