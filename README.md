@@ -81,9 +81,9 @@ Run the following command as ADMIN.
 
 3. Create a new AI profile in your business schema using [DBMS_CLOUD_AI.CREATE_PROFILE][19] procedure.    
 
-	    BEGIN
-           DBMS_CLOUD_AI.CREATE_PROFILE(                                              
-          'OCI_GENAI',                                                             
+		BEGIN
+           DBMS_CLOUD_AI.CREATE_PROFILE(
+          'OCI_GENAI',                               
           '{
             "provider": "oci",
             "credential_name": "OCI$RESOURCE_PRINCIPAL",
@@ -96,7 +96,7 @@ Run the following command as ADMIN.
             "oci_runtimetype": "COHERE",
             "temperature":"0.4"
           }');                                                                  
-        END;   
+        END;
 
 	Attributes of an AI profile help to manage and configure the behavior of the AI profile. For the full list of attributes refer to [this][21].
 
