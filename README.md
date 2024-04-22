@@ -72,7 +72,7 @@ Run the following command as ADMIN.
     allow group <your-group-name> to manage generative-ai-family in compartment <your-compartment-name>
 
 2. Connect as an ADMIN user to the database and enable OCI [resource principal][16] authentication using [DBMS_CLOUD_ADMIN.ENABLE_PRINCIPAL_AUTH][17] procedure.
-    
+
 	    BEGIN
     
             DBMS_CLOUD_ADMIN.ENABLE_PRINCIPAL_AUTH(provider => 'OCI',username =>'<<your schema name>>');
@@ -80,23 +80,23 @@ Run the following command as ADMIN.
         END;
 
 3. Create a new AI profile in your business schema using [DBMS_CLOUD_AI.CREATE_PROFILE][19] procedure.    
-    
-	    BEGIN                                                                        
-           DBMS_CLOUD_AI.CREATE_PROFILE(                                              
-          'OCI_GENAI',                                                             
-          '{
-            "provider": "oci",
-            "credential_name": "OCI$RESOURCE_PRINCIPAL",
-            "object_list": [
-                             {
-                             "owner": "<<your schema name>>"
-                             }
-                            ],
-            "model": "cohere.command-light",
-            "oci_runtimetype": "COHERE",
-            "temperature":"0.4"
-          }');                                                                  
-        END;   
+
+	    BEGIN
+           DBMS_CLOUD_AI.CREATE_PROFILE(                                              
+          'OCI_GENAI',                                                             
+          '{
+            "provider": "oci",
+            "credential_name": "OCI$RESOURCE_PRINCIPAL",
+            "object_list": [
+                             {
+                             "owner": "<<your schema name>>"
+                             }
+                            ],
+            "model": "cohere.command-light",
+            "oci_runtimetype": "COHERE",
+            "temperature":"0.4"
+          }');                                                                  
+        END;   
 
 	Attributes of an AI profile help to manage and configure the behavior of the AI profile. For the full list of attributes refer to [this][21].
 
