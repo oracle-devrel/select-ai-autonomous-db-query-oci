@@ -4,6 +4,13 @@
 
 # Integrating OCI Generative AI with Select AI and APEX to query data using natural language
 
+
+## Additional Resources
+
+- [Use Select AI to Generate SQL from Natural Language Prompts](https://blogs.oracle.com/machinelearning/post/introducing-natural-language-to-sql-generation-on-autonomous-database)
+- [DBMS_CLOUD_AI Views](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/dbms-cloud-ai-views.html)
+
+
 ## Introduction
 
 One remarkable capability of Large Language Models (LLMs) is their ability to generate code, including Structured Query Language (SQL) for databases. LLMs can understand the natural language question and generate a corresponding SQL query as an output. 
