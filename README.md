@@ -191,7 +191,7 @@ Run the following command as ADMIN.
 
 The ability of LLMs to generate queries adds more value to enterprise data. It substantially enhances the user experience, making data access more efficient. However, it's important to remember that LLMs are susceptible to hallucinations, and their generated results may not always be accurate. There's a possibility that a specific natural language prompt may not produce the intended SQL query, or the generated SQL may not be executable. Despite these limitations, the integration of LLMs remains a valuable asset for data management, provided users remain aware of its potential inaccuracies and exercise caution in interpreting and implementing generated queries.
 
-Content in this demo created by [Rekha Mathew][2].
+The content in this demo is created by following [the steps in this blog post.](https://www.ateam-oracle.com/post/using-oci-genai-with-select-ai-and-apex-to-query-data-using-natural-language)
 
 [2]: https://www.ateam-oracle.com/authors/rekha-mathew
 
@@ -206,6 +206,7 @@ Content in this demo created by [Rekha Mathew][2].
 [28]: https://docs.oracle.com/en-us/iaas/autonomous-database-serverless/doc/dbms-cloud-ai-package.html#GUID-7B438E87-0E9A-4318-BA01-3BE1A5851229
 
 ## Contributing
+
 This project is open source.  Please submit your contributions by forking this repository and submitting a pull request!  Oracle appreciates any contributions that are made by the open source community.
 
 ## License
